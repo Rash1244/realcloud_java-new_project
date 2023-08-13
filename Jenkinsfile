@@ -15,7 +15,7 @@ pipeline {
         
         stage('Deploy to Tomcat') {
             steps {
-              deploy adapters: [tomcat9(path: '', url: '')], contextPath: 'webapp', war: '**/*.war'
+               deploy adapters: [tomcat9(path: '', url: 'http://3.14.132.16:8080/')], contextPath: 'webapp', war: '**/*.war'
             }
         }
     }
